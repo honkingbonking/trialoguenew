@@ -851,6 +851,13 @@ _.extend(Story.prototype, {
 		$.event.trigger('restore:after');
 		return true;
 	}
+		
+prototype.clearMessagesAfterDelay = function(delayMS) {
+  setTimeout(function() {
+    // Clear all the messages (passages)
+    $('#phistory').empty();
+  }, delayMS);
+};
 });
 
 module.exports = Story;
